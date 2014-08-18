@@ -1,0 +1,27 @@
+<h1>Listing takeouts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @takeouts.each do |takeout| %>
+      <tr>
+        <td><%= takeout.number %></td>
+        <td><%= link_to 'Show', takeout %></td>
+        <td><%= link_to 'Edit', edit_takeout_path(takeout) %></td>
+        <td><%= link_to 'Destroy', takeout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Takeout', new_takeout_path %>

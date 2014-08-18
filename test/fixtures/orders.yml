@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sold_to: MyString
+  quantity: 1
+  time: 2014-08-14 03:17:25
+
+two:
+  sold_to: MyString
+  quantity: 1
+  time: 2014-08-14 03:17:25

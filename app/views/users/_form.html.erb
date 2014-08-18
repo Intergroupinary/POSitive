@@ -1,0 +1,25 @@
+<%= simple_form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.input :role, :collection => User::ROLES %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.input :first_name %>
+  <%= f.input :middle_name %>
+  <%= f.input :last_name %> 
+  <%= f.input :contact_number %>
+  <%= f.input :address %>
+  <%= f.input :age %>   
+  <%= f.input :birthday %> 
+  <%= f.button :submit %>
+<% end %>
